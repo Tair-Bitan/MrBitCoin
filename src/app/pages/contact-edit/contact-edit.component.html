@@ -1,0 +1,17 @@
+<section class="contact-edit flex col align-center">
+    <img src="https://robohash.org/{{contact?.name || 'stam'}}.png?set=set5" />
+    <form class="flex col" [formGroup]="form">
+        <label>Name
+            <input type="text" formControlName="name" placeholder="Enter Name">
+        </label>
+        <label>Phone
+            <input type="tel" formControlName="phone" placeholder="+1(123) 123-1234">
+        </label>
+        <label>Email
+            <input type="email" formControlName="email" placeholder="name@mashu.com">
+        </label>
+
+        <button class="light-btn" (click)="onSaveContact()">Save</button>
+    </form>
+    <button class="float-back-btn" (click)="onGoBack()">←</button>
+</section>

@@ -1,0 +1,8 @@
+<section class="signup flex col align-center center">
+    <img src="../../../assets/icons/bitcoin.png">
+    <h2>Please Enter Yout Name:</h2>
+    <form class="flex col align-center center" (submit)="onSignUp()">
+        <input type="text" name="name" placeholder="username" [(ngModel)]="username">
+        <button class="light-btn">Sign Up</button>
+    </form>
+</section>

@@ -1,0 +1,49 @@
+// BASE
+* {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+h1 {
+    color: #369;
+    font-size: 2.5em;
+}
+
+h2,
+h3 {
+    color: #444;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    @include clean-btn;
+
+    &.rounded-btn {
+        @include rounded-btn;
+    }
+
+    &.light-btn {
+        @include light-btn;
+    }
+
+    &.float-back-btn {
+        @include float-back-btn;
+    }
+}

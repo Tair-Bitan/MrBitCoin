@@ -1,0 +1,11 @@
+<section class="chart flex col align-center">
+    <h1>Usefull Stats</h1>
+    <h2>Market Price</h2>
+    <google-chart class="chart" [type]="marketChart.type" [data]="marketChart.data" [columns]="marketChart.columnNames"
+        [width]="marketChart.width" [height]="marketChart.height">
+    </google-chart>
+    <h2>Daily Transactions</h2>
+    <google-chart class="chart" [type]="transactionChart.type" [data]="transactionChart.data"
+        [columns]="transactionChart.columnNames" [width]="transactionChart.width" [height]="transactionChart.height">
+    </google-chart>
+</section>

@@ -1,0 +1,18 @@
+.contact-card {
+    margin: 10px;
+    width: 220px;
+    padding: 1em 1.5em;
+    background-color: rgb(189, 204, 203);
+    border: none;
+    border-radius: 2em;
+    text-align: start;
+    opacity: 1;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.7;
+    }
+    img {
+        width: 30px;
+        margin-inline-end: 10px;
+    }
+}

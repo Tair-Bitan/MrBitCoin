@@ -1,0 +1,25 @@
+.contact-edit {
+    position: relative;
+    & > * {
+        margin-bottom: 50px;
+    }
+
+    img {
+        width: 150px;
+    }
+
+    form {
+        input {
+            border: none;
+            border-bottom: 2px solid #336699;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            &:focus{
+                outline: none;
+            }
+        }
+        button{
+            margin: 0;
+        }
+    }
+}

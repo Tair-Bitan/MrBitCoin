@@ -1,0 +1,155 @@
+.app-component {
+    text-align: center;
+    .app-header {
+        margin-bottom: 50px;
+        h1 {
+            font-size: 3em;
+            cursor: pointer;
+            &:focus{
+                outline: none;
+            }
+        }
+        ul {
+            & > *:not(:last-child) {
+                margin-inline-end: 50px;
+            }
+        }
+        a {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #292929;
+        }
+        .btn-menu {
+            position: relative;
+            right: 20px;
+            align-self: center;
+            align-items: center;
+            width: 30px;
+            height: 100%;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+            // &:hover > * {
+            //     background-color: #292929;
+            // }
+            & > * {
+                display: block;
+                position: absolute;
+                height: 3px;
+                width: 100%;
+                background-color: #292929;
+                border-radius: 10px;
+                opacity: 1;
+                left: 0;
+                transform: rotate(0deg);
+                transition: 0.25s ease-in-out;
+            }
+            :first-child {
+                top: calc(50% - 9px);
+            }
+            :nth-child(2) {
+                top: 50%;
+            }
+            :last-child {
+                top: calc(50% + 9px);
+            }
+
+            // &.open {
+            //     right: 20px
+            // }
+            &.open :first-child {
+                top: 50%;
+                transform: rotate(135deg);
+            }
+            &.open :nth-child(2) {
+                opacity: 0;
+                left: 60px;
+            }
+            &.open :last-child {
+                top: 50%;
+                transform: rotate(-135deg);
+            }
+        }
+    }
+
+    @media (max-width: 460px) {
+        ul {
+            position: fixed;
+            transform: translateX(100%);
+            top: 100px;
+            right: 0;
+            width: 180px;
+            height: 100vh;
+            flex-direction: column;
+            // align-items: center;
+            background-color: #336699;
+            transition: transform 0.5s;
+            li {
+                width: 100%;
+                height: fit-content;
+                margin: 0;
+                padding: 20px 0;
+                border-bottom: 1px solid white;
+                &:first-child {
+                    border-top: 1px solid white;
+                }
+            }
+            &.open {
+                transform: translateX(0);
+            }
+        }
+        .btn-menu {
+            display: flex;
+        }
+    }
+    @media (min-width: 460px) {
+        ul {
+            position: fixed;
+            transform: translateX(100%);
+            top: 100px;
+            right: 0;
+            width: 180px;
+            height: 100vh;
+            flex-direction: column;
+            // align-items: center;
+            background-color: #336699;
+            transition: transform 0.5s;
+            li {
+                width: 100%;
+                height: fit-content;
+                margin: 0;
+                padding: 20px 0;
+                border-bottom: 1px solid white;
+                &:first-child {
+                    border-top: 1px solid white;
+                }
+            }
+            &.open {
+                transform: translateX(0);
+            }
+        }
+        .btn-menu {
+            display: flex;
+        }
+    }
+    @media (min-width: 650px) {
+        ul {
+            position: static;
+            transform: translateX(0);
+            width: fit-content;
+            height: 100%;
+            flex-direction: row;
+            background-color: transparent;
+            li {
+                width: fit-content;
+                margin-inline-end: 2rem;
+                border: none;
+                &:first-child {
+                    border-top: none;
+                }
+            }
+        }
+        .btn-menu {
+            display: none;
+        }
+    }
+}

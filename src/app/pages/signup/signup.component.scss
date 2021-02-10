@@ -1,0 +1,19 @@
+.signup {
+    & > * {
+        margin: 20px 0;
+    }
+    img {
+        width: 150px;
+    }
+    form {
+        input {
+            border: none;
+            border-bottom: 2px solid #336699;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

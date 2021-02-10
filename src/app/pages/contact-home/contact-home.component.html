@@ -1,0 +1,7 @@
+<section class="contact-home">
+    <h1>Your Contacts</h1>
+    <contact-filter (onFilter)="onSetFilter($event)"></contact-filter>
+    <button class="light-btn" (click)="onAdd()">Add New Contact</button>
+    <contact-list [contacts]="contacts">
+    </contact-list>
+</section>

@@ -1,0 +1,42 @@
+.contact-details {
+    position: relative;
+    img {
+        margin: 10px;
+        width: 150px;
+    }
+    form {
+        input {
+            border: none;
+            border-bottom: 2px solid #336699;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            &:focus {
+                outline: none;
+            }
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+        button {
+            background-color: rgb(65, 221, 65);
+        }
+    }
+    .delete-modal {
+        position: absolute;
+        top: 20vh;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2em;
+        font-weight: 600;
+    }
+}
+
+// button {
+//     margin: 10px;
+//     padding: 1em 1.5em;
+//     border: 1px solid rgb(165, 189, 189);
+//     border-radius: 2px;
+//     background-color: rgb(189, 204, 203);
+// }

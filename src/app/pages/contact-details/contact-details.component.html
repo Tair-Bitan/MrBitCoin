@@ -1,0 +1,20 @@
+<section class="contact-details">
+    <div *ngIf="!deleted">
+        <img src="https://robohash.org/{{contact.name}}.png?set=set5" />
+        <h2>{{contact.name}}</h2>
+        <p>Id: {{contact._id}}</p>
+        <p>Email: {{contact.email}}</p>
+        <p>Phone: {{contact.phone}}</p>
+        <div class="transfer flex col center align-center">
+            <h3>Be a Good Friend And Give Him Some Coins</h3>
+            <form (submit)="onTransfer()" class="flex align-end">
+                <input type="number" name="amount" [(ngModel)]=amount>
+                <button class="light-btn">Transfer</button>
+            </form>
+        </div>
+        <button class="float-back-btn" (click)="onGoBack()">←</button>
+        <button class="light-btn" (click)="onEdit()">Edit Contact</button>
+        <button class="light-btn" (click)="onDelete()">Delete Contact😲😭</button>
+    </div>
+    <div *ngIf="deleted" class="delete-modal">{{contact.name}} Deleted Successfully! <br> He wasn't good for you anyway...</div>
+</section>

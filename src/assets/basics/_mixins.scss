@@ -1,0 +1,98 @@
+// Breakpoint mixins
+@mixin for-mobile-layout {
+    @media (max-width: $mobile-breakpoint) {
+        @content;
+    }
+}
+
+@mixin for-narrow-layout {
+    @media (min-width: $mobile-breakpoint) {
+        @content;
+    }
+}
+
+@mixin for-normal-layout {
+    @media (min-width: $narrow-breakpoint) {
+        @content;
+    }
+}
+
+@mixin for-wide-layout {
+    @media (min-width: $normal-breakpoint) {
+        @content;
+    }
+}
+
+//Button mixins
+@mixin clean-btn($clr: black) {
+    color: $clr;
+    background-color: transparent;
+    border: none;
+    padding: 0 1rem;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin light-btn($clr: white) {
+    margin: 10px;
+    padding: 1em 1.5em;
+    border: 1px solid rgb(165, 189, 189);
+    border-radius: 2px;
+    background-color: rgb(189, 204, 203);
+    opacity: 1;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+@mixin float-back-btn($clr: white) {
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    padding: 0;
+    height: 50px;
+    font-size: 4em;
+    color: #336699;
+    // border-radius: 50%;
+    // background-color: #336699;
+    opacity: 1;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+@mixin rounded-btn($clr: white) {
+    background-color: transparent;
+    border: 1px solid $clr;
+    border-radius: 2rem;
+    padding: 0 1rem;
+}
+
+// Media  mixins
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    overflow: hidden;
+    &::before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+    > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    > img {
+        height: 100%;
+        object-fit: cover;
+    }
+}

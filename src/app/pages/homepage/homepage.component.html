@@ -1,0 +1,35 @@
+<section class="homepage">
+    <!-- {{userService.getUser() | async | json}} -->
+    <h1>Hello {{user.name}}</h1>
+    <img src="https://robohash.org/{{user.name}}.png?set=set5" />
+    <h2>You have:</h2>
+    <div class="coins">
+        <h3>
+            <img src="../../../assets/icons/coins.png" alt="">
+            Coins: {{user.coins}}
+        </h3>
+        <h3>
+            <img src="../../../assets/icons/bitcoin.png" alt="">
+            BTC: {{userBTC}}
+        </h3>
+    </div>
+    <h2>Last Moves:</h2>
+    <ul class="user-moves clean-list flex col">
+        <li class="flex align-center space-between">
+            <h3>At</h3>
+            <h3>To</h3>
+            <h3>Amount</h3>
+        </li>
+        <li *ngFor="let move of user.moves" class="flex align-center space-between">
+            <p>
+                {{move.at | date: 'M/d/yy'}}
+            </p>
+            <p>
+                {{move.to}}
+            </p>
+            <p>
+                {{move.amount}}
+            </p>
+        </li>
+    </ul>
+</section>

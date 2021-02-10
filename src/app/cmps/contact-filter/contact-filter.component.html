@@ -1,0 +1,5 @@
+<section class="contact-filter flex col align-center">
+    <input type="text" name="term" placeholder="Search Contact" [(ngModel)]="filterBy.term"
+        (input)="onSetFilter(filterBy)">
+    <button>Search</button>
+</section>

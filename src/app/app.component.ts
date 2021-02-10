@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   title = 'MrBitCoin';
+  isMenuOpen: boolean = false
+
+  toggleMenu() {
+    console.log('hi');
+    this.isMenuOpen = !this.isMenuOpen
+  }
+
 }
